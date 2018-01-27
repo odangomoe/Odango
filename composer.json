@@ -1,0 +1,24 @@
+{
+    "name": "odango/odango",
+    "description": "The frontend of odango, build on marx",
+    "type": "project",
+    "require": {
+        "bitcommunism/marx": "^1.0",
+        "bitcommunism/http": "^1.0",
+        "bitcommunism/twig": "^1.0",
+        "bitcommunism/doctrine": "^1.0",
+        "odango/atama": "^1.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Odango\\Http\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "eater",
+            "email": "hello@eaterofco.de"
+        }
+    ]
+}

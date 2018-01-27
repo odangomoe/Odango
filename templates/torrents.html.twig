@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div class="set-window">
+    <h2>{{ anime.title }}</h2>
+    <span>{{ anime.alternatives|join(', ') }}</span>
+
+    {% for key, group_sets in sets %}
+        <div class="group-block">
+            <h4>{{ key ?: 'Unkown' }}</h4>
+
+            {% for set in group_sets %}
+                <div class="set">
+                    <h5>{{ set.metadata.type }}{{ set.metadata.resolution ? (' / ' ~ set.metadata.resolution) }}</h5>
+
+                    <div class="torrents">
+                        {% for torrent in set.torrents %}
+                            <div class="torrent">
+                                <div class="torrent-title">{{ torrent.title }}</div>
+                                <div class="torrent-link"><a href="{{ torrent.nyaa.view }}">nyaa.si</a></div>
+                                <div class="torrent-download"><a href="{{ torrent.nyaa.torrent }}">torrent</a></div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

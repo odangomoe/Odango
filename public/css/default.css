@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background: #F1A9A0;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    height: 100%;
+}
+
+.window {
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.window .logo {
+    height: 150px;
+}
+
+.title {
+    width: 250px;
+}
+
+.name {
+    font-size: 40px;
+}
+
+.search {
+    margin-top: 5px;
+}
+
+.search > * {
+    float: left;
+    display: block;
+    height: 30px;
+}
+
+.search input {
+    width: 400px;
+    border: 0;
+    padding: 5px;
+    font-size: 1.02em;
+    font-weight: 300;
+}
+
+.autocomplete-suggestions {
+    border: none;
+}
+
+.autocomplete-suggestion {
+    padding: 0 5px;
+}
+
+.autocomplete-suggestion b {
+    color: #D24D57;
+}
+
+.search button {
+    width: 75px;
+    background: #D24D57;
+    color: #ffffff;
+    font-weight: normal;
+    border: 0;
+    padding: 6px;
+}
+
+.set-window {
+    width: 550px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.torrent > div {
+    padding: 0 5px;
+}
+.torrents::after {
+    clear: both;
+    display: table;
+    content: "";
+}
+.torrent {
+    display: flex;
+}
+.torrent-title {
+    flex-grow: 1;
+}
+
+.torrent a {
+    color: #D24D57;
+    text-decoration: none;
+}
