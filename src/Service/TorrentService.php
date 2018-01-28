@@ -76,7 +76,7 @@ class TorrentService
                     'submitter-id' => $torrent->getSubmitterId(),
                     'nyaa' => [
                         'view' => 'https://nyaa.si/view/' . $torrent->getId(),
-                        'torrent' => 'https://nyaa.si/download/' . $torrent->getId(),
+                        'torrent' => 'https://nyaa.si/download/' . $torrent->getId() . '.torrent',
                     ],
                     'metadata' => $torrent->getMetadata()->getArray(),
                 ];
