@@ -349,6 +349,7 @@ class TorrentMetadata extends Metadata
 
     public function getArray() {
         return [
+            'type' => $this->type,
             'resolution' => $this->resolution,
             'ep' => $this->offsetGet('ep'),
             'collection' => $this->offsetGet('collection'),
