@@ -12,6 +12,7 @@ class JSON
     protected function json(ResponseInterface $response, $arr) {
         return $response
             ->withHeader('Content-Type', 'application/json')
+            ->withHeader('Access-Control-Allow-Origin', '*')
             ->withBody(stream_for(json_encode($arr)));
     }
 }
